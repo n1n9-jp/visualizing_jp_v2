@@ -1,0 +1,16 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /visualizing_jp_v2/
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^css/(.*) /visualizing_jp_v2/wp-content/themes/sassy-roots/css/$1 [QSA,L]
+RewriteRule ^js/(.*) /visualizing_jp_v2/wp-content/themes/sassy-roots/js/$1 [QSA,L]
+RewriteRule ^img/(.*) /visualizing_jp_v2/wp-content/themes/sassy-roots/img/$1 [QSA,L]
+RewriteRule ^modules/(.*) /visualizing_jp_v2/wp-content/plugins/$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /visualizing_jp_v2/index.php [L]
+</IfModule>
+
+# END WordPress
