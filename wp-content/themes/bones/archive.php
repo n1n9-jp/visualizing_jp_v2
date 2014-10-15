@@ -97,16 +97,15 @@
 							    <!-- カテゴリーごとに打ち出す内容を変える -->
 							    <?php if(in_category('framework')): ?>
 							        <ul class="sub-list-banner">
-							          <li><a href="/visualizing_jp/tag/d3/"><img src="<?php bloginfo('stylesheet_directory');?>/css/img/banner-d3.png" width="218px" height="60px" title="D3" /></a></li>
+							          <li><a href="/visualizing_jp/tag/d3/"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/banner-d3.png" width="218px" height="60px" title="D3" /></a></li>
 							          <!--
 							          <li><a href="/visualizing_jp/tag/processing/"><img src="<?php bloginfo('stylesheet_directory');?>/css/img/banner-p5.png" width="218px" height="60px" title="processing" /></a></li>
 							          <li><a href="/visualizing_jp/tag/openframeworks/"><img src="<?php bloginfo('stylesheet_directory');?>/css/img/banner-of.png" width="218px" height="60px" title="openFrameworks" /></a></li>
 							          -->
 							        </ul>
 							    <?php elseif(in_category('event')): ?>
-							        <ul class="sub-list-banner">
-							          <li><a href="http://wired.jp/conference2013/" target="_blank"><img src="<?php bloginfo('stylesheet_directory');?>/css/img/wired_conf_banner_300-250.jpg" width="220" title="WIRED CONFERENCE 2013 OPEN GOVERNMENT 未来の政府を考える" /></a></li> 
-							          <li><a href="http://okfn.jp/home/events/eventcalendar/"><img src="<?php bloginfo('stylesheet_directory');?>/css/img/banner-opendata_event_cal.png" width="220" height="60" title="オープンデータ・イベント・カレンダー" /></a></li>
+							        <ul class="sub-list-banner"> 
+							          <li><a href="http://okfn.jp/home/events/eventcalendar/"><img src="<?php bloginfo('stylesheet_directory');?>/library/images/banner-opendata_event_cal.png" width="220" height="60" title="オープンデータ・イベント・カレンダー" /></a></li>
 							        </ul>
 							    <?php else: ?>
 							    <?php endif; ?>
