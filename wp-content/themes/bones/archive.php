@@ -119,6 +119,8 @@
 							---------------------------------------->
 							<section class="widget categories-2 widget_categories">
 							<div class="widget-inner">
+									<h3>その他の記事</h3>
+									<ul class="sub-article-list">
 							       <?php
 							         $newslist = get_posts( array(
 							          'posts_per_page' => 10, //取得記事件数
@@ -127,17 +129,16 @@
 							          foreach( $newslist as $post ):
 							          setup_postdata( $post );
 							        ?>
-							        <h3>その他の記事</h3>
 
-							        <ul class="sub-article-list">
+							        
 							            <li><a href="<?php the_permalink() ?>">
 							              <div class="postThumbnail"><?php the_post_thumbnail( array(210, 91) ); ?></div>
 							              <?php the_title(); ?>
 							            </a></li>
-							        <?php
-							          endforeach;
-							          wp_reset_postdata();
-							        ?>
+								        <?php
+								          endforeach;
+								          wp_reset_postdata();
+								        ?>
 							        </ul>
 							</div>
 							</section>

@@ -46,6 +46,7 @@ ul#menu-primary-navigation li a {
 /* @end */
 
 /* @group ARCHIVE-SUB */
+
 ul.sub-article-list {
 	margin-left: 0em;	
 }
@@ -53,4 +54,21 @@ ul.sub-article-list {
 ul.sub-category-list {
 	margin-left: 0em;	
 }
+/* @end */
+
+
+/* @group Home */
+
+.topMainColumn ul {
+	width: 100%;
+}
+	
+.topMainColumn ul li {
+	width: 100%;
+	min-height: 220px;
+	margin-left: 1em;
+	margin-bottom: 15px;
+	float: left;
+}
+
 /* @end */

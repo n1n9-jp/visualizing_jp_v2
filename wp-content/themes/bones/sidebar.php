@@ -9,13 +9,13 @@
     <?php endif; ?>
 
 	<section class="widget recent-posts-2 widget_recent_entries">
-		<div class="widget-inner">
+		<div class="widget-inner widget-fb">
 			<div class="fb-like-box" data-href="https://www.facebook.com/pages/visualizingjp/175190925974218" data-width="210" data-height="600" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 		</div>
 	</section>
 
 	<section class="widget recent-posts-2 widget_recent_entries">
-		<div class="widget-inner">
+		<div class="widget-inner widget-sns">
 			<ul class="sub-list-thumbnail">
 				<li><a href="https://www.facebook.com/pages/visualizingjp/175190925974218" target="_blank" class="sns-fb"></a></li>
 				<li><a href="https://twitter.com/visualizing_jp" target="_blank" class="sns-tw"></a></li>
@@ -27,7 +27,7 @@
 	<?php if(is_front_page()): ?>
 	<?php else: ?>
 		<section class="widget recent-posts-2 widget_recent_entries">
-			<div class="widget-inner">
+			<div class="widget-inner widget-book">
 				<h3>オススメ本リスト</h3>
 				<ul id="book-list">
 				<li class="recommend-book">

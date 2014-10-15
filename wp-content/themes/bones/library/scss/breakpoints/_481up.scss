@@ -45,7 +45,7 @@ ul#menu-primary-navigation li a {
 /* @group SIDEBAR */
 
 .widget-inner {
-	float: left;
+	float: none;
 	margin-left: 2em;
 	margin-top: 1em;
 }
@@ -64,6 +64,34 @@ ul.sub-category-list {
 	margin-left: 0em;	
 }
 /* @end */
+
+
+/* @group Home */
+
+.topMainColumn ul {
+	width: 100%;
+}
+
+.topMainColumn ul li {
+	width: 100%;
+	min-height: 220px;
+	margin-bottom: 15px;
+	float: left;
+	padding: 0 1em 0 1em;
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
 
 
 

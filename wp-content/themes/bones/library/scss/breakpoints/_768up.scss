@@ -54,7 +54,6 @@ ul#menu-primary-navigation li a {
 /* @group SIDEBAR */
 
 .widget-inner {
-	margin-top: 0em;
 	margin-left: 0em;
 }
 
@@ -347,4 +346,18 @@ mobile. Make sure to double check these!
 /* @end */
 
 
+/* @group Home */
 
+.topMainColumn ul {
+	width: 100%;
+}
+	
+.topMainColumn ul li {
+	width: 100%;
+	min-height: 220px;
+	margin-left: 1em;
+	margin-bottom: 15px;
+	float: left;
+}
+
+/* @end */

@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $keycolor3;
@@ -128,7 +128,7 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	text-rendering: optimizelegibility;
+	/* text-rendering: optimizelegibility; */
 	font-weight: 500;
 	/*
 	if you're going to use webfonts, be sure to check your weights
@@ -409,9 +409,14 @@ and more scalable.
 
 .wp_social_bookmarking_light {
   background-color: #efefef;
-  height: 40px;
+  min-height: 16px;
 }
 
+.wp_social_bookmarking_light div {
+	display: inline;
+	margin-left: 1em;
+	vertical-align:middle;
+}
 
 
 		.hentry {
@@ -728,10 +733,10 @@ PAGE NAVI STYLES
       padding: 0.75em;
       min-width: 1em;
       display: block;
-      color: $blue;
+      color: $linkcolor1;
 
       &:hover, &:focus {
-      	background-color: $blue;
+      	background-color: $linkcolor1;
       	color: $white;
       }
     }
@@ -894,7 +899,9 @@ ul.sub-category-list {
 }
 
 
-
+.widget-sns {
+	margin-top: 3em !important;
+}
 	
 	
 /* @end */
@@ -912,6 +919,7 @@ ul.sub-category-list {
 .fb-like-box {
 	width: 210px;
 	height: 600px;
+	background-color: $white;
 }
 
 ul#book-list {
@@ -1080,16 +1088,18 @@ FOOTER STYLES
 }
 
 .topMainColumn ul {
-
+	width: 100%;
 }
 	
 .topMainColumn ul li {
-	width: 340px;
+	width: 100%;
 	min-height: 220px;
-	margin-left: 1em;
 	margin-bottom: 15px;
 	float: left;
+	padding: 0 1em 0 1em;
 }
+
+/* @end */
 
 .topMainColumn ul li a.home-article {
 	display: block;

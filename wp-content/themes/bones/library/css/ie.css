@@ -222,7 +222,7 @@ ul#menu-primary-navigation li a {
 /* @end */
 /* @group SIDEBAR */
 .widget-inner {
-  float: left;
+  float: none;
   margin-left: 2em;
   margin-top: 1em; }
 
@@ -233,6 +233,18 @@ ul.sub-article-list {
 
 ul.sub-category-list {
   margin-left: 0em; }
+
+/* @end */
+/* @group Home */
+.topMainColumn ul {
+  width: 100%; }
+
+.topMainColumn ul li {
+  width: 100%;
+  min-height: 220px;
+  margin-bottom: 15px;
+  float: left;
+  padding: 0 1em 0 1em; }
 
 /* @end */
 /*********************
@@ -317,7 +329,6 @@ ul#menu-primary-navigation li a {
 /* @end */
 /* @group SIDEBAR */
 .widget-inner {
-  margin-top: 0em;
   margin-left: 0em; }
 
 /* @end */
@@ -437,6 +448,18 @@ mobile. Make sure to double check these!
 
 /* end .footer-links */
 /* @end */
+/* @group Home */
+.topMainColumn ul {
+  width: 100%; }
+
+.topMainColumn ul li {
+  width: 100%;
+  min-height: 220px;
+  margin-left: 1em;
+  margin-bottom: 15px;
+  float: left; }
+
+/* @end */
 /******************************************************************
 Site Name:
 Author:
@@ -479,6 +502,18 @@ ul.sub-article-list {
 
 ul.sub-category-list {
   margin-left: 0em; }
+
+/* @end */
+/* @group Home */
+.topMainColumn ul {
+  width: 100%; }
+
+.topMainColumn ul li {
+  width: 100%;
+  min-height: 220px;
+  margin-left: 1em;
+  margin-bottom: 15px;
+  float: left; }
 
 /* @end */
 /*
