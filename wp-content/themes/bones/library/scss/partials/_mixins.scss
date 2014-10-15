@@ -70,4 +70,131 @@ probably best not to use it. I mean, were you going to anyway? */
 	box-sizing:         $type;
 }
 
+/*********************
+DROP SHADOW
+*********************/
+
+@mixin bg-shadow {
+	-moz-box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;	
+}
+
+
+/*********************
+HOVER EFFECTS
+*********************/
+
+@mixin hover-alpha {
+	opacity: 0.6;
+	-moz-opacity: 0.6;
+	-webkit-opacity: 0.6;
+	-khtml-opacity: 0.6; 	
+	filter: alpha(opacity=60);
+}
+
+
+/*********************
+RADIUS
+*********************/
+.border-radius-top {	
+	border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px;
+	-webkit-border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px;
+}
+
+.border-radius {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+
+/*********************
+BUTTON
+*********************/
+
+.btn {
+	display: block;
+	padding: 4px 10px 4px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.btn-large {
+	display: block;
+	padding: 12px 10px 12px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+
+/*
+btn-pr
+*/
+@mixin btn-pr {
+	@extend .btn;
+	@extend .border-radius-top;
+	color: #FFFFFF;
+	background-color: $keycolor3;
+}
+
+@mixin btn-pr-hover {
+	@extend .btn;
+	@extend .border-radius-top;
+	color: #FFFFFF;
+	background-color: $linkcolor1;
+}
+
+@mixin btn-pr-stay {
+	@extend .btn;
+	@extend .border-radius-top;
+	color: #FFFFFF;
+	background-color: #333;
+}
+
+/*
+btn-txt-internal
+*/
+@mixin btn-txt-internal {
+	@extend .btn;
+	@extend .border-radius;
+	color: #FFFFFF;
+	background-color: $keycolor3;
+}
+
+@mixin btn-txt-internal-hover {
+	@extend .btn;
+	@extend .border-radius;
+	color: #FFFFFF;
+	background-color: $linkcolor1;
+}
+
+/*
+btn-subnavi
+*/
+@mixin btn-thumbnail {
+	@extend .btn-large;
+	color: $text-color;
+	background-color: $white;
+}
+
+@mixin btn-thumbnail-hover {
+	@include btn-thumbnail;
+	background-color: $bgcolor1;
+}
+
+@mixin btn-txt-navi {
+	@extend .btn-large;
+	color: #FFFFFF;
+	background-color: $keycolor3;
+}
+
+@mixin btn-txt-navi-hover {
+	@include btn-txt-navi;
+	background-color: $linkcolor1;
+}
+
 

@@ -4,35 +4,24 @@ div.wpcf7 {
 }
 
 div.wpcf7-response-output {
-	margin: 2em 0.5em 1em;
+	margin: 2em 0.5em 1em 0em;
 	padding: 0.2em 1em;
 }
 
-div.wpcf7 .screen-reader-response {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	width: 1px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
 div.wpcf7-mail-sent-ok {
-	border: 2px solid #398f14;
+	background-color: #dee0d5;
 }
 
 div.wpcf7-mail-sent-ng {
-	border: 2px solid #ff0000;
+	background-color: #FF0000;
 }
 
 div.wpcf7-spam-blocked {
-	border: 2px solid #ffa500;
+	background-color: #ffa500;
 }
 
 div.wpcf7-validation-errors {
-	border: 2px solid #f7e700;
+	background-color: #f7e700;
 }
 
 span.wpcf7-form-control-wrap {
@@ -40,19 +29,21 @@ span.wpcf7-form-control-wrap {
 }
 
 span.wpcf7-not-valid-tip {
-	color: #f00;
-	font-size: 1em;
-	display: block;
-}
-
-.use-floating-validation-tip span.wpcf7-not-valid-tip { 
 	position: absolute;
 	top: 20%;
 	left: 20%;
 	z-index: 100;
-	border: 1px solid #ff0000;
 	background: #fff;
-	padding: .2em .8em;
+	border: 1px solid #ff0000;
+	font-size: 10pt;
+	width: 280px;
+	padding: 2px;
+}
+
+span.wpcf7-not-valid-tip-no-ajax {
+	color: #f00;
+	font-size: 10pt;
+	display: block;
 }
 
 span.wpcf7-list-item {
@@ -76,3 +67,81 @@ div.wpcf7 div.ajax-error {
 div.wpcf7 .placeheld {
 	color: #888;
 }
+
+
+/*
+	additional styles
+*/
+
+.form-1column {
+	width: 690px;
+	height: 60px;
+	display: block;
+	clear: both;
+	border-top: 4px solid #dee0d5;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.form-textarea {
+	height: 140px;
+}
+
+.form-label {
+	width: 340px;
+	float: left;
+	color: #6f7262;
+}
+
+.form-content {
+	width: 330px;
+	float: left;
+	margin-left: 10px;
+	border-top-color: #fea0ff;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"]
+{
+    background-color: #dee0d5;
+    color: #000;
+    width: 330px;
+    height: 24px;
+    border: 1px inset;
+}
+
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus
+{
+    background-color: #FFFFFF;
+}
+
+.wpcf7-form textarea
+{
+    background-color: #dee0d5;
+    color: #000;
+    width: 330px;
+    height: 120px;
+    border: 1px inset;
+}
+
+.wpcf7-form textarea:focus
+{
+    background-color: #FFFFFF;
+}
+
+.wpcf7-form .form-submit {
+	width: 690px;
+	height: 60px;
+	/* padding-top: 20px; */
+	background-color: #dee0d5;
+	text-align: center;
+}
+
+
+input[type="submit"].wpcf7-submit {
+	margin-top: 20px;
+	width: 120px;
+	cursor: pointer;
+}
+

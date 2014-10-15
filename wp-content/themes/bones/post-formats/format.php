@@ -17,13 +17,11 @@
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
                 <header class="article-header">
-
-                  <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-
-                  <p class="byline vcard">
-                    <?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-                  </p>
-
+                  <div class="entry-tag"><?php the_tags('<ul class="entry-tags"><li><i class="fa fa-tag"></i>','</li><li><i class="fa fa-tag"></i>','</li></ul>'); ?></div>
+                  <div class="postThumbnail"><?php the_post_thumbnail( 'bones-thumb-440' ); ?></div>
+                    <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+                  <time class="byline updated" datetime="<?php echo get_the_time('c'); ?>" pubdate><i class="fa fa-clock-o"></i> <?php echo sprintf(__('%s %s', 'roots'), get_the_date(), get_the_time()); ?></time>
+                  <p class="byline author vcard"><i class="fa fa-pencil"></i> by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?php echo get_the_author(); ?></a></p>
                 </header> <?php // end article header ?>
 
                 <section class="entry-content cf" itemprop="articleBody">
@@ -53,13 +51,7 @@
                 </section> <?php // end article section ?>
 
                 <footer class="article-footer">
-
-                  <?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
+                  <?php the_tags('<ul class="entry-tags"><li><i class="fa fa-camera-retro fa-li"></i>','</li><li><i class="fa fa-flag fa-li"></i>','</li></ul>'); ?>
                 </footer> <?php // end article footer ?>
-
-                <?php comments_template(); ?>
 
               </article> <?php // end article ?>

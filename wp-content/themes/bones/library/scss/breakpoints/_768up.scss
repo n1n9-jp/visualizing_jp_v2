@@ -13,31 +13,78 @@ come into play. Have fun!
 ******************************************************************/
 
 
-/*********************
-GENERAL STYLES
-*********************/
+
+
+/* @group GENERAL STYLES */
 
 body {}
 
-/*********************
-LAYOUT & GRID STYLES
-*********************/
+/* @end */
+
+
+/* @group LAYOUT & GRID STYLES */
 
 .wrap {
 	width: 760px;
 }
 
-/*********************
-HEADER STYLES
-*********************/
+/* @end */
+
+/* @group Header */
+
+.search-form {
+	padding-top: 6em;
+}
+
+/* @end */
+
+
+/* @group PRIMARY NAVIGATION STYLES */
+
+ul#menu-primary-navigation li a {
+	min-height: 48px;
+}
+
+/* @end */
+
+
+
+
+
+/* @group SIDEBAR */
+
+.widget-inner {
+	margin-top: 0em;
+	margin-left: 0em;
+}
+
+/* @end */
+
+
+/* @group ARCHIVE-SUB */
+ul.sub-article-list {
+	margin-left: 0em;	
+}
+
+ul.sub-category-list {
+	margin-left: 0em;	
+}
+/* @end */
+
+
+
+/* @group HEADER STYLES */
+
 
 .header {}
 
 	#logo {}
 
-/*********************
-NAVIGATION STYLES
-*********************/
+/* @end */
+
+
+
+/* @group NAVIGATION STYLES */
 
 .nav {
 	border: 0;
@@ -137,13 +184,20 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
-/*********************
-SIDEBARS & ASIDES
-*********************/
+
+/* @end */
+
+
+
+
+
+/* @group SIDEBARS & ASIDES */
 
 .sidebar {
 	margin-top: 2.2em;
 }
+
+
 
 	.widgettitle {
 		border-bottom: 2px solid #444;
@@ -260,9 +314,13 @@ SIDEBARS & ASIDES
 	.textwidget p {}
 
 
-/*********************
-FOOTER STYLES
-*********************/
+/* @end */
+
+
+
+
+
+/* @group FOOTER STYLES */
 
 /*
 you'll probably need to do quite a bit
@@ -284,4 +342,9 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+
+
+/* @end */
+
+
 

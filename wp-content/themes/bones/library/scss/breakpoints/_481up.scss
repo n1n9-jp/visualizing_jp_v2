@@ -23,6 +23,52 @@ them in here, they won't work.
 */
 
 
+/* @group Header */
+
+.search-form {
+	padding-top: 1em;
+}
+
+/* @end */
+
+
+
+
+/* @group PRIMARY NAVIGATION STYLES */
+
+ul#menu-primary-navigation li a {
+	min-height: 48px;
+}
+
+/* @end */
+
+/* @group SIDEBAR */
+
+.widget-inner {
+	float: left;
+	margin-left: 2em;
+	margin-top: 1em;
+}
+
+/* @end */
+
+
+
+
+/* @group ARCHIVE-SUB */
+ul.sub-article-list {
+	margin-left: 0em;	
+}
+
+ul.sub-category-list {
+	margin-left: 0em;	
+}
+/* @end */
+
+
+
+
+
 /*********************
 NAVIGATION STYLES
 *********************/

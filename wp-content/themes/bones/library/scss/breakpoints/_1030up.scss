@@ -12,3 +12,53 @@ be seen on the Desktop.
 .wrap {
   width: 1040px;
 }
+
+
+/* @group Header */
+
+.search-form {
+	padding-top: 4em;
+}
+
+/* @end */
+
+
+/* @group PRIMARY NAVIGATION STYLES */
+
+ul#menu-primary-navigation li a {
+	min-height: 16px;
+}
+
+/* @end */
+
+
+/* @group SIDEBAR */
+
+.widget-inner {
+	margin-left: 0em;
+}
+
+/* @end */
+
+
+/* @group ARCHIVE */
+
+.archive-sub {
+	/* background-color: #EEEEEE; */
+	padding-bottom: 10000px;
+	margin-bottom: -10000px;
+	background: url("../images/bg_related-article-list.png") repeat-y;
+}
+
+/* @end */
+
+
+/* @group ARCHIVE-SUB */
+ul.sub-article-list {
+	margin-left: 0em;	
+}
+
+ul.sub-category-list {
+	margin-left: 0em;	
+}
+/* @end */

@@ -76,6 +76,16 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 
+add_image_size( 'bones-thumb-440', 440, 196, true );
+add_image_size( 'bones-thumb-340', 340, 148, true );
+
+add_filter( 'post_thumbnail_html', 'custom_attribute' );
+function custom_attribute( $html ){
+    // width height を削除する
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+    return $html;
+}
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you

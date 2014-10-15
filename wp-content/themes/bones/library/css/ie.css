@@ -39,6 +39,54 @@ Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+/* bgcolor */
+/* link color*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
 /******************************************************************
 Site Name:
 Author:
@@ -81,6 +129,51 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+DROP SHADOW
+*********************/
+/*********************
+HOVER EFFECTS
+*********************/
+/*********************
+RADIUS
+*********************/
+.border-radius-top {
+  border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px / 4px 4px 0px 0px; }
+
+.border-radius {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+
+/*********************
+BUTTON
+*********************/
+.btn {
+  display: block;
+  padding: 4px 10px 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none; }
+
+.btn-large {
+  display: block;
+  padding: 12px 10px 12px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none; }
+
+/*
+btn-pr
+*/
+/*
+btn-txt-internal
+*/
+/*
+btn-subnavi
+*/
 /******************************************************************
 Site Name:
 Author:
@@ -117,6 +210,31 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
+/* @group Header */
+.search-form {
+  padding-top: 1em; }
+
+/* @end */
+/* @group PRIMARY NAVIGATION STYLES */
+ul#menu-primary-navigation li a {
+  min-height: 48px; }
+
+/* @end */
+/* @group SIDEBAR */
+.widget-inner {
+  float: left;
+  margin-left: 2em;
+  margin-top: 1em; }
+
+/* @end */
+/* @group ARCHIVE-SUB */
+ul.sub-article-list {
+  margin-left: 0em; }
+
+ul.sub-category-list {
+  margin-left: 0em; }
+
+/* @end */
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -180,27 +298,47 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
-/*********************
-GENERAL STYLES
-*********************/
-/*********************
-LAYOUT & GRID STYLES
-*********************/
+/* @group GENERAL STYLES */
+/* @end */
+/* @group LAYOUT & GRID STYLES */
 .wrap {
   width: 760px; }
 
-/*********************
-HEADER STYLES
-*********************/
-/*********************
-NAVIGATION STYLES
-*********************/
+/* @end */
+/* @group Header */
+.search-form {
+  padding-top: 6em; }
+
+/* @end */
+/* @group PRIMARY NAVIGATION STYLES */
+ul#menu-primary-navigation li a {
+  min-height: 48px; }
+
+/* @end */
+/* @group SIDEBAR */
+.widget-inner {
+  margin-top: 0em;
+  margin-left: 0em; }
+
+/* @end */
+/* @group ARCHIVE-SUB */
+ul.sub-article-list {
+  margin-left: 0em; }
+
+ul.sub-category-list {
+  margin-left: 0em; }
+
+/* @end */
+/* @group HEADER STYLES */
+/* @end */
+/* @group NAVIGATION STYLES */
 .nav {
   border: 0;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */ }
   .nav ul {
+    background: #323944;
     margin-top: 0; }
   .nav li {
     float: left;
@@ -216,7 +354,7 @@ NAVIGATION STYLES
       has the possibility of being a mobile device.
       */ }
       .nav li a:hover, .nav li a:focus {
-        color: white;
+        color: #fff;
         text-decoration: underline; }
     .nav li ul.sub-menu,
     .nav li ul.children {
@@ -224,7 +362,6 @@ NAVIGATION STYLES
       border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
-      overflow: hidden;
       visibility: hidden;
       z-index: 8999;
       /* highlight sub-menu current page */ }
@@ -245,15 +382,17 @@ NAVIGATION STYLES
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }
-    .nav li:hover ul {
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          top: 0;
+          left: 100%; }
+    .nav li:hover > ul {
       top: auto;
-      overflow: visible;
       visibility: visible; }
 
 /* end .nav */
-/*********************
-SIDEBARS & ASIDES
-*********************/
+/* @end */
+/* @group SIDEBARS & ASIDES */
 .sidebar {
   margin-top: 2.2em; }
 
@@ -282,9 +421,8 @@ SIDEBARS & ASIDES
 /* recent-comments widget */
 /* search widget */
 /* text widget */
-/*********************
-FOOTER STYLES
-*********************/
+/* @end */
+/* @group FOOTER STYLES */
 /*
 you'll probably need to do quite a bit
 of overriding here if you styled them for
@@ -298,6 +436,7 @@ mobile. Make sure to double check these!
   */ }
 
 /* end .footer-links */
+/* @end */
 /******************************************************************
 Site Name:
 Author:
@@ -311,6 +450,37 @@ be seen on the Desktop.
 .wrap {
   width: 1040px; }
 
+/* @group Header */
+.search-form {
+  padding-top: 4em; }
+
+/* @end */
+/* @group PRIMARY NAVIGATION STYLES */
+ul#menu-primary-navigation li a {
+  min-height: 16px; }
+
+/* @end */
+/* @group SIDEBAR */
+.widget-inner {
+  margin-left: 0em; }
+
+/* @end */
+/* @group ARCHIVE */
+.archive-sub {
+  /* background-color: #EEEEEE; */
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
+  background: url("../images/bg_related-article-list.png") repeat-y; }
+
+/* @end */
+/* @group ARCHIVE-SUB */
+ul.sub-article-list {
+  margin-left: 0em; }
+
+ul.sub-category-list {
+  margin-left: 0em; }
+
+/* @end */
 /*
 you can call the larger styles if you want, but there's really no need
 */
