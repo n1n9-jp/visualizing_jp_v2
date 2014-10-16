@@ -72,7 +72,7 @@
 	} else if ( preg_match( $searchPattern, $str, $imgurl ) && ! is_archive() && ! is_front_page() && ! is_home()) {//投稿にサムネイルは無いが画像がある場合の処理
 	     echo '<meta property="og:image" content="'.$imgurl[2].'" />';echo "\n";
 	} else {//投稿にサムネイルも画像も無い場合、もしくはアーカイブページの処理
-	     echo '<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/favicon/ogp.png" />';echo "\n";
+	     echo '<meta property="og:image" content="http://visualizing.jp/wp-content/themes/bones/library/images/favicon/ogp.png" />';echo "\n";
 	}
 	?>
 	<!-- /Facebook -->
@@ -123,7 +123,7 @@
 							<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-							'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+							'menu' => __( 'Primary Navigation', 'bonestheme' ),  // nav name
 							'menu_class' => 'nav top-nav cf',               // adding custom nav class
 							'theme_location' => 'main-nav',                 // where it's located in the theme
 							'before' => '',                                 // before the menu

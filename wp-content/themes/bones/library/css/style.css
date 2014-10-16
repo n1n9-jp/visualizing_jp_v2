@@ -1609,6 +1609,11 @@ and more scalable.
 .byline a {
   display: inline; }
 
+.byline a:focus,
+.byline a:active,
+.byline a:hover {
+  text-decoration: none; }
+
 /* entry content */
 .entry-content {
   padding: 0em 1.5em 0 1.5em;
@@ -2000,7 +2005,6 @@ FOOTER STYLES
   float: left;
   padding: 0 1em 0 1em; }
 
-/* @end */
 .topMainColumn ul li a.home-article {
   display: block;
   text-decoration: none; }
@@ -2014,6 +2018,22 @@ FOOTER STYLES
   -khtml-opacity: 0.6;
   filter: alpha(opacity=60);
   text-decoration: underline; }
+
+/* @end */
+/* @group Contents Area */
+body.page .article-header {
+  margin-top: 3em; }
+
+.inline-link {
+  margin: 0 0.5em 0 0.5em; }
+
+a.inline-link {
+  text-decoration: underline; }
+
+a.inline-link:focus,
+a.inline-link:active,
+a.inline-link:hover {
+  text-decoration: none; }
 
 /* @end */
 /*********************
@@ -2058,8 +2078,9 @@ tweeners.
   /* @group SIDEBAR */
   .widget-inner {
     float: none;
-    margin-left: 2em;
-    margin-top: 1em; }
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0 0 0 1em; }
 
   /* @end */
   /* @group ARCHIVE-SUB */
